@@ -1,82 +1,92 @@
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family:CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif) ;
 }
 body{
-  
-  background-color: #023047;
+    background-color: #000000;
 }
-h1{
-  color: #DDDDDD;
-  font-size: 4rem;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.invert{
+    filter: invert(1);
 }
-.cont{
-  height: 80vh;
- display: flex;
- justify-content: center;
- align-items: center;
+.sv1{
+    width: 26px;
 }
-.game{
-height: 60vmin;
-width: 60vmin;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-grid-template-rows: repeat(3,1fr);
-justify-content: center;
-align-items: center;
+.main{
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 6px;
+    display: flex;
+   
 }
-.one{
-height: 18vmin;
-width: 18vmin;
-border-radius: 10px;
-border: none;
-font-size: 2.5rem;
-color: #a7b3be;
-background-color: #DDDDDD;
+.fir{
+    color: white;
+    width: 25vw; 
 }
-.re{
- 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+.sec{
+    color: white;
+    background-color: #121212;
+    margin-left: 6px;
+    border-radius: 7px;
 }
-.reset{
-  width: 70px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 1.2rem;
-  background-color: #caf0f8;
-  
+.Home{
+    margin-top: 8px;
 }
-#new-btn {
-  padding: 1rem;
-  font-size: 1.25rem;
-  background-color: #191913;
-  color: #fff;
-  border-radius: 1rem;
-  border: none;
+.task{
+    border-radius: 7px;
+    background-color: #121212;
+}
+.Home ul li{
+    font-weight: bold;
+    display: flex;
+    list-style: none;
+    width: 107px;
+    align-items: center;
+    padding: 10px 10px 10px 0px; 
+    gap: 20px;
+}
+.ho{
+    padding: 20px;
+}
+.sec{
+    width: 75vw;
+     
+}
+/* sec libraray */
+.library{
+    margin-top: 10px;
+    border-radius: 7px;
+    background-color: #121212;
+    width: 25vw;
+    height: 70vh;
+    position: relative;
 }
 
-#msg {
-  color: #ffffc7;
-  font-size: 5vmin;
+.book{
+    width: 26px;
 }
-
-.msg-container {
-  height: 34vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4rem;
+.add{
+    position: relative;
+    left: 15vmin;
+    width: 18px;
 }
-
-.hide {
-  display: none;
+.lib{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 5px;
+    color: gray;
+    font-size: 12px;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: grey;
 }
