@@ -20,8 +20,9 @@ body{
    
 }
 .fir{
+    position: fixed;
     color: white;
-    width: 25vw; 
+    width: 23vw; 
 }
 .sec{
     color: white;
@@ -50,16 +51,18 @@ body{
     padding: 20px;
 }
 .sec{
-    width: 75vw;
-     
+    width: 74vw;
+    height: 100vh;
+     position: relative;
+     left: 297px;
 }
 /* sec libraray */
 .library{
     margin-top: 10px;
     border-radius: 7px;
     background-color: #121212;
-    width: 25vw;
-    height: 70vh;
+    width: 23vw;
+    height: 71vh;
     position: relative;
 }
 
@@ -85,7 +88,8 @@ body{
     gap: 5px;
     color: gray;
     font-size: 12px;
-    
+    gap: 15px;
+padding: 5px;
 }
 .footer a{
     text-decoration: none;
@@ -96,12 +100,147 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 9px;
+    background-color: #090909;
 }
-.button button {
-    background-color: #121212;
-    color: white;
-    border: none;
-    padding-right:10px ;
-    font-weight: bold;
+
+/* cards */
+.cards{
+  padding: 16px;
+}
+.containers{
+    margin-top: 30px;
+    width: 150px;
+
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #252525;
+    position: relative;
+}
+.cardContainers{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow-y: scroll
+}
+.containers h3{
+    font-size: medium;
+}
+.containers p{
+    display: inline;
+    font-size: small;
+    color: gray;
+}
+.cardphoto{
+width: 100%;
+border-radius: 10px;
+object-fit: cover;
 
 }
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 88px;
+    right: 17px;
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+/* General scrollbar settings */
+::-webkit-scrollbar {
+    width: 12px;  /* Width of the scrollbar */
+    height: 12px;  /* Height of the scrollbar for horizontal scrolling */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #2e2e2e;  /* Dark background for the track */
+    border-radius: 6px;  /* Optional: to round the track edges */
+}
+
+/* Thumb (the draggable part) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #555;  /* Darker color for the thumb */
+    border-radius: 6px;  /* Round edges */
+    border: 2px solid #2e2e2e;  /* Space around thumb matches the track background */
+}
+
+/* Thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777;  /* Lighter color on hover */
+}
+
+/* Thumb when active (being dragged) */
+::-webkit-scrollbar-thumb:active {
+    background-color: #999;  /* Even lighter color when active */
+}
+
+/* Optional: Corner of the scrollbar in case of both vertical and horizontal scrollbars */
+::-webkit-scrollbar-corner {
+    background: #2e2e2e;  /* Matches the track background */
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button button {
+    /* background-color: #090909; */
+    /* color: white; */
+    border: none;
+    padding-right:10px ;
+    /* font-weight: bold; */
+}
+.singbtn{
+    background-color: #090909;
+    color: gray;
+    margin-right: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.singbtn:hover{
+    color: white;
+font-size: 1rem;
+
+}
+.Loginbtn{
+    border-radius: 21px;
+    padding: 10px;
+    width: 69px;
+    color: #000000;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 6px;
+    font-weight: bolder;
+}
+.Loginbtn:hover{
+    width: 75px;
+}
+.playbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    filter: invert(1);
+    background:#25252500;
+    border-radius: 10px;
+    width: 90%;
+    padding: 12px;
+    width: 70vw;
+    min-height: 40px;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
