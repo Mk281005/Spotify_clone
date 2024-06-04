@@ -52,7 +52,7 @@ body{
 }
 .sec{
     width: 74vw;
-    height: 100vh;
+    height: 89vh;
      position: relative;
      left: 297px;
 }
@@ -120,7 +120,7 @@ padding: 5px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    height: 80vh;
+    height: 73vh;
     overflow-y: scroll
 }
 .containers h3{
@@ -227,13 +227,14 @@ font-size: 1rem;
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 30px;
-    filter: invert(1);
-    background:#25252500;
+    bottom: 0px;
+    
+    background-color: #121212;
+    /* background: #25252500; */
     border-radius: 10px;
-    width: 90%;
+    
     padding: 12px;
-    width: 70vw;
+    width: 925px;
     min-height: 40px;
 }
 
@@ -242,5 +243,68 @@ font-size: 1rem;
     justify-content: center;
     gap: 16px;
 }
+.playlist{
+    max-height: 250px;
+    overflow-y:scroll ;
+}
+.playlist li{
+    padding: 4px;
+}
+.playlist ul{
+    list-style: decimal;
+}
+.playlist ul li{
+  
+    border-radius: 10px;
+    width: 270px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    margin: 7px; /* Adjust margin as needed */
+    padding: 4px; /* Add padding to give space around the content */
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ki{
+    list-style: none;
+}
+/* .kin{
+    border-radius: 10px;
+    width: 260px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+} */
 
+ .info{
+    font-size: small;
+    
+} 
+.playnow{
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
 
+.seekbar{
+    left: 4px;
+    bottom: -58px;
+    width: 99%;
+    height: 2px;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid white;
+}
+.seek{
+    width: 9px;
+    height: 9px;
+    position: relative;
+    border-radius: 50%;
+    background: white;
+    bottom: 4px;
+    left:0%;
+    transition: left 0.2s;
+}
