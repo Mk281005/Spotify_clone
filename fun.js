@@ -1,6 +1,6 @@
 console.log("hi");
 let cur = new Audio();
-
+let song;
 function secondsToMinutesSeconds(seconds) {
   if (isNaN(seconds) || seconds < 0) {
     return "00:00";
@@ -22,7 +22,7 @@ async function getsongs() {
   let div = document.createElement("div");
   div.innerHTML = response;
   let an = div.getElementsByTagName("a");
-  let song = [];
+  song = [];
   for (let i = 0; i < an.length; i++) {
     const ele = an[i];
 
@@ -42,7 +42,7 @@ const playnow = (tra) => {
 
   pl.src = "pause.svg";
   cur.play();
-  document.querySelector(".songinfo").innerHTML = tra;
+  document.querySelector(".songinfo").innerHTML = tra.replace(".","");
   document.querySelector(".songdur").innerHTML="00:00/00:00"
  
   
@@ -105,5 +105,53 @@ let i=0;
       document.querySelector(".seek").style.left = per+"%";
       cur.currentTime=((cur.duration)*per)/100;
   })}
+ document.querySelector("#previous").addEventListener("click", ()=>{
+  console.log("clicked");
+  if (!cur.src) {
+    let firstSong = document
+      .querySelector(".playlist ul li .info .in")
+      .innerHTML.trim();
+    playnow(firstSong);
+  } 
+  else{
+    let ind=cur.src.split("/songs/")[1];
+    let index=song.indexOf(ind);
+    if(index-1>0){
+      console.log(song[index-1].replaceAll("%20", " ").replaceAll("mp3", ""))
+      playnow(song[index-1].replaceAll("%20", " ").replaceAll("mp3", ""));
+    }
+    else{
+      console.log(song[song.length-1].replaceAll("%20", " ").replaceAll("mp3", ""));
+      playnow(song[song.length-1].replaceAll("%20", " ").replaceAll("mp3", ""));
+    }
+   
+  }
+  
+  
+ })
+ document.querySelector("#next").addEventListener("click", ()=>{
+  console.log("clicked");
+  if (!cur.src) {
+    let firstSong = document
+      .querySelector(".playlist ul li .info .in")
+      .innerHTML.trim();
+    playnow(firstSong);
+  } 
+  else{
+    let ind=cur.src.split("/songs/")[1];
+    let index=song.indexOf(ind);
+    if(index+1<song.length){
+      console.log(song[index+1].replaceAll("%20", " ").replaceAll("mp3", ""))
+      playnow(song[index+1].replaceAll("%20", " ").replaceAll("mp3", ""));
+    }
+    else{
+      console.log(song[0].replaceAll("%20", " ").replaceAll("mp3", ""));
+      playnow(song[0].replaceAll("%20", " ").replaceAll("mp3", ""));
+    }
+   
+  }
+  
+ })
+
 
 main();
